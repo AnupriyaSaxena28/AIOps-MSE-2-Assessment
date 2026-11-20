@@ -1,0 +1,45 @@
+MLOps assessment execution evidence
+===================================
+
+Commands executed:
+1. python train.py
+2. python monitor.py
+3. python -m pytest -q
+
+Initial champion:
+- Training rows: 381
+- Holdout rows: 82
+- MAE: 1,013,349.54
+- RMSE: 1,422,871.96
+- R2: 0.5284
+- Saved: models/housing_champion.joblib
+
+Incoming labelled batch validation:
+- Rows: 82
+- Columns: 10
+- Missing values: 0
+- Duplicate records: 0
+- Target distribution (5 price bins): see artifacts/quality_gate_decision.json and monitor.py console output.
+
+Candidate:
+- Retraining rows (historical + incoming): 463
+- MAE: 1,022,696.28
+- RMSE: 1,459,360.45
+- R2: 0.5039
+- Saved separately: models/housing_candidate.joblib
+
+Quality gate:
+- Primary metric: RMSE
+- Required candidate RMSE: <= 1,408,643.24 (at least 1% lower than champion)
+- Actual candidate RMSE: 1,459,360.45
+- Decision: RETAIN_CHAMPION
+- Champion overwritten: false
+
+Tests:
+- 3 passed.
+
+MLflow:
+- MLflow integration is implemented in train.py and monitor.py and mlflow is listed
+  in requirements.txt. The execution environment used to prepare this ZIP did not have
+  MLflow installed, so this run saved local reports/artifacts and printed a clear
+  tracking-skipped message. Install requirements.txt and rerun to record runs in mlruns/.

@@ -1,0 +1,9 @@
+{
+  "model": "RandomForestRegressor",
+  "role": "initial_champion",
+  "rows": 381,
+  "holdout_rows": 82,
+  "mae": 1013349.5362313201,
+  "rmse": 1422871.9570253936,
+  "r2": 0.5284054271343592
+}

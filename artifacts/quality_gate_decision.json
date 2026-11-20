@@ -1,0 +1,10 @@
+{
+  "decision": "RETAIN_CHAMPION",
+  "champion_rmse": 1422871.9570253936,
+  "candidate_rmse": 1459360.4471283306,
+  "required_max_candidate_rmse": 1408643.2374551396,
+  "minimum_rmse_improvement": 0.01,
+  "selected_metric": "RMSE",
+  "reason": "Candidate did not achieve the required 1% RMSE improvement; champion retained.",
+  "champion_overwritten": false
+}

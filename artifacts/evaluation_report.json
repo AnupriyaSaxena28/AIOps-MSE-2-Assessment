@@ -1,0 +1,22 @@
+{
+  "incoming_batch_dataset": "incoming_labelled_batch.csv",
+  "incoming_batch_rows": 82,
+  "champion_on_incoming_batch": {
+    "mae": 1006287.6587404385,
+    "rmse": 1303963.062342791,
+    "r2": 0.6063742843247382
+  },
+  "evaluation_dataset": "quality_holdout.csv",
+  "holdout_rows": 82,
+  "champion": {
+    "mae": 1013349.5362313201,
+    "rmse": 1422871.9570253936,
+    "r2": 0.5284054271343592
+  },
+  "candidate": {
+    "mae": 1022696.2849012775,
+    "rmse": 1459360.4471283306,
+    "r2": 0.5039079112724123
+  },
+  "training_rows_after_retraining": 463
+}
